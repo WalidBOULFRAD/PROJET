@@ -1,0 +1,19 @@
+-> BD
+
+timestamp (jour/heure)
+idCapteur
+typeCapteur
+ValeurCapteur
+uniteValeur
+longitute
+latitude
+
+(demander à Francois Thibolt les info quand à son groupe de Projet, comment il compte faire la BD)...
+
+Sinon, se lancer dans la vue batiments et pieces
+
+-> Laisser un bouton 2D/3D dans campus et piece
+
+-> Recevoir le codes du stage sur les courbes des capteurs
+
+temp / CO2 / humidité / camera(capteur presonce) / capteur niveau sonor(decibel) / ouverture fermeture volet / allumage luminaire
