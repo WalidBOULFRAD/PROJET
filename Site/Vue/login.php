@@ -14,7 +14,7 @@
 						<h2>Inscription</h2>
 						<p>Veuillez remplir ce formulaire d'inscription :</p>
 						
-						<form method="post" action="../Traitement/traitementConnexion.php">
+						<form method="post" action="../Contoleur/traitementConnexion.php">
 							
 				            <div class="form-group"></br>
 				                  Email * :

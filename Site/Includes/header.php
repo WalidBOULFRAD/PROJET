@@ -38,11 +38,11 @@
 							<li>
 								<a href="#" class="icon fa-angle-down">Menu</a>
 								<ul>
-									<li><a href="../Affichage/description.php">Description</a></li>
-									<li><a href="../Affichage/visualisation_campus.php">Visualisation</a></li>
-									<li><a href="../Affichage/search.php">Recherche</a></li>
-									<li><a href="../Affichage/admin.php">Administrateur</a></li>
-									<li><a href="../Affichage/contact.php">Contact</a></li>
+									<li><a href="../Vue/description.php">Description</a></li>
+									<li><a href="../Vue/visualisation_campus.php">Visualisation</a></li>
+									<li><a href="../Vue/search.php">Recherche</a></li>
+									<li><a href="../Vue/admin.php">Administrateur</a></li>
+									<li><a href="../Vue/contact.php">Contact</a></li>
 <!--
 									<li>
 										<a href="#">Submenu</a>
@@ -56,7 +56,7 @@
 -->
 								</ul>
 							</li>
-							<li><a href="../Affichage/login.php" class="button">Log In</a></li>
+							<li><a href="../Vue/login.php" class="button">Log In</a></li>
 						</ul>
 					</nav>
 				</header>
