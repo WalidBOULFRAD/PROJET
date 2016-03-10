@@ -74,7 +74,7 @@
 												    var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 												    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227),17);
 												    map.addLayer(osm);
-													//set up marker and polygonne 
+													//set up marker and polygonne
 													 $.getJSON("../Includes/map.geojson", function(data){
 														 var icon = L.icon({
 															 iconUrl: 'images/info.png',
@@ -84,26 +84,12 @@
 
 															 pointToLayer: function(feature,latlng){
 																 var marker = L.marker(latlng,{icon: icon});
-																 marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
+																 link = feature.properties.Location;
+																 marker.bindPopup("<a href="+link+">"+feature.properties.Location+"</a>");
 																 return marker;
 															 }
-
-
-
 														 }).addTo(map);
-														// L.geoJson(data).addTo(map);
 													 });
-
-
-												    //set the places we want to be clickable
-												    /*var marker1 = L.marker([43.5593610, 1.4717975]).addTo(map);
-												    var marker2 = L.marker([43.55867869999999, 1.4697025999999917]).addTo(map);
-												    var marker3 = L.marker([43.5594196, 1.4722961999999598]).addTo(map);
-
-													 //set pop up in the map
-												    marker1.bindPopup("Batiment 4TP4");
-												    marker2.bindPopup("Batiment 4TP2");
-												    marker3.bindPopup("Batiment 4R3");*/
 												</script>
 												
 											</div>
