@@ -74,12 +74,26 @@
 												    var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 												    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227),17);
 												    map.addLayer(osm);
-
+													//set up marker and polygonne 
 													 $.getJSON("../Includes/map.geojson", function(data){
-														 L.geoJson(data).addTo(map);
+														 var icon = L.icon({
+															 iconUrl: 'images/info.png',
+															 iconSize: [20,20]
+														 });
+														 L.geoJson(data,{
+
+															 pointToLayer: function(feature,latlng){
+																 var marker = L.marker(latlng,{icon: icon});
+																 marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
+																 return marker;
+															 }
+
+
+
+														 }).addTo(map);
+														// L.geoJson(data).addTo(map);
 													 });
 
-													
 
 												    //set the places we want to be clickable
 												    /*var marker1 = L.marker([43.5593610, 1.4717975]).addTo(map);
