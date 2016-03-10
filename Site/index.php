@@ -1,3 +1,3 @@
 <?php 
-	header ("Location: ./Affichage/accueil.php");
+	header ("Location: ./Vue/accueil.php");
 ?>

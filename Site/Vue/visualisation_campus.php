@@ -96,7 +96,7 @@
 											
 												<div class="form-group"></br>
 									                
-									                <h3>Filtres :</h3>
+									                <h3>Filtres:</h3>
 
 													<div class="btn-group" data-toggle="buttons">
 														
