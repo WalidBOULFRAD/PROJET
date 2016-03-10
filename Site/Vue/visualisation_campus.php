@@ -79,6 +79,8 @@
 												    var marker1 = L.marker([43.5593610, 1.4717975]).addTo(map);
 												    var marker2 = L.marker([43.55867869999999, 1.4697025999999917]).addTo(map);
 												    var marker3 = L.marker([43.5594196, 1.4722961999999598]).addTo(map);
+
+													 //set pop up in the map
 												    marker1.bindPopup("Batiment 4TP4");
 												    marker2.bindPopup("Batiment 4TP2");
 												    marker3.bindPopup("Batiment 4R3");
