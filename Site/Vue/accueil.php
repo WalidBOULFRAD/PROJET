@@ -8,7 +8,7 @@
 					<p>DÉMONSTRATEUR DE CAMPUS CONNECTÉ, INNOVANT, INTELLIGENT, DURABLE.</p>
 					<ul class="actions">
 						<li><a href="./signup.php" class="button special">Inscription</a></li>
-						<li><a href="./visualisation.php" class="button">Visualiser</a></li>
+						<li><a href="./visualisation_campus.php" class="button">Visualiser</a></li>
 					</ul>
 				</section>
 
