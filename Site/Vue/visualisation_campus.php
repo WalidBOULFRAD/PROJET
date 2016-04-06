@@ -1,6 +1,6 @@
 <?php
 	include '../Includes/bootstrap.php';
-	include '../Includes/header.php';
+	   include '../Includes/header.php';
 ?>
     <script src="/Site/Traitement/_assets/highcharts.js"></script>
     <script src="/Site/Traitement/_assets/js/exporting.js"></script>
