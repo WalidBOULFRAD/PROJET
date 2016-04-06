@@ -1,0 +1,20 @@
+// Carte
+{ "_id" : 0, "latitude" : 43.5594196, "longitude" : 1.4722961999999598 }
+{ "_id" : 1, "latitude" : 43.559361, "longitude" : 1.4717975 }
+{ "_id" : 2, "latitude" : 43.55867869999999, "longitude" : 1.4697025999999918 }
+
+// Batiments
+{ "_id" : 0, "idC" : 0, "nom" : "4TP4", "url" : "../img/Batiments/Bat0.jpg" }
+{ "_id" : 1, "idC" : 1, "nom" : "4TP2", "url" : "../img/Batiments/Bat1.jpg" }
+{ "_id" : 2, "idC" : 2, "nom" : "4R3", "url" : "../img/Batiments/Bat2.jpg" }
+
+// Pieces
+{ "_id" : 0, "idB" : 0, "url" : "../img/Pieces/Eta0.jpg" }
+{ "_id" : 1, "idB" : 0, "url" : "../img/Pieces/Eta1.jpg" }
+{ "_id" : 2, "idB" : 0, "url" : "../img/Pieces/Eta2.jpg" }
+{ "_id" : 3, "idB" : 1, "url" : "../img/Pieces/Eta0.jpg" }
+{ "_id" : 4, "idB" : 1, "url" : "../img/Pieces/Eta1.jpg" }
+{ "_id" : 5, "idB" : 1, "url" : "../img/Pieces/Eta2.jpg" }
+{ "_id" : 6, "idB" : 2, "url" : "../img/Pieces/Eta0.jpg" }
+{ "_id" : 7, "idB" : 2, "url" : "../img/Pieces/Eta1.jpg" }
+{ "_id" : 8, "idB" : 2, "url" : "../img/Pieces/Eta2.jpg" }

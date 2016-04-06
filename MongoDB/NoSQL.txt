@@ -1,0 +1,50 @@
+sudo mongod
+
+mongo
+
+use OC
+
+db.runCommand({buildinfo: 1});
+
+db.runCommand({listDatabases: 1});
+
+show dbs;
+
+// ----------------------------------------------------------------------------------- //
+
+db.createCollection('Carte');
+db.createCollection('Batiment');
+db.createCollection('Piece');
+db.createCollection('Capteur');
+
+// ------------------------------------------------------- //
+
+db.Carte.insert({_id : 0, latitude : 43.5594196, longitude : 1.4722961999999598});
+db.Carte.insert({_id : 1, latitude : 43.5593610, longitude : 1.4717975});
+db.Carte.insert({_id : 2, latitude : 43.55867869999999, longitude : 1.4697025999999917});
+
+db.Carte.find();
+
+// ------------------------------------------------------- //
+
+db.Batiment.insert({_id : 0, idC : 0, nom : "4TP4", url : "../img/Batiments/Bat0.jpg"});
+db.Batiment.insert({_id : 1, idC : 1, nom : "4TP2", url : "../img/Batiments/Bat1.jpg"});
+db.Batiment.insert({_id : 2, idC : 2, nom : "4R3", url : "../img/Batiments/Bat2.jpg"});
+
+db.Batiment.find();
+
+// ------------------------------------------------------- //
+
+db.Piece.insert({_id : 0, idB : 0, url : "../img/Pieces/Eta0.jpg"});
+db.Piece.insert({_id : 1, idB : 0, url : "../img/Pieces/Eta1.jpg"});
+db.Piece.insert({_id : 2, idB : 0, url : "../img/Pieces/Eta2.jpg"});
+
+db.Piece.insert({_id : 3, idB : 1, url : "../img/Pieces/Eta0.jpg"});
+db.Piece.insert({_id : 4, idB : 1, url : "../img/Pieces/Eta1.jpg"});
+db.Piece.insert({_id : 5, idB : 1, url : "../img/Pieces/Eta2.jpg"});
+
+db.Piece.insert({_id : 6, idB : 2, url : "../img/Pieces/Eta0.jpg"});
+db.Piece.insert({_id : 7, idB : 2, url : "../img/Pieces/Eta1.jpg"});
+db.Piece.insert({_id : 8, idB : 2, url : "../img/Pieces/Eta2.jpg"});
+
+db.Piece.find();

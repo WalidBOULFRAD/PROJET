@@ -1,0 +1,11 @@
+A faire :
+
+-> Base de données (MongoDB)
+
+-> La vue Campus (Ludo)
+-> La vue Batiments
+-> La vue Pieces
+
+-> La sous vue Tableau
+-> La sous vue Graphe
+-> La sous vue Carte & Plan
