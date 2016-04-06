@@ -18,7 +18,7 @@
 					<section class="box special">
 						<header class="major">
 							<h2>NeOCampus,
-							<br />
+							<br/>
 							Le projet de demain</h2>
 							<p>L’opération neOCampus a été initiée en juin 2013 par le président de l’Université Paul Sabatier (UPS), Bertrand Monthubert, et comporte actuellement 10 laboratoires de l’UPS : CESBIO,  CIRIMAT, ECOLAB, IRIT, LAAS, LAPLACE, LCC, LERASS, LMDC, PHASE.  Ces laboratoires ont pour objectif de croiser leurs compétences  pour améliorer le confort au quotidien pour la communauté universitaire tout en diminuant l’empreinte écologique des bâtiments et en réduisant les coûts de fonctionnement (fluide, eau, électricité...).</p>
 						</header>

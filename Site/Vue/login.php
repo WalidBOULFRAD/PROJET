@@ -10,24 +10,26 @@
 			<!-- Main -->
 				<section id="main" class="container 75%">
 					<div class="box">
-	
-						<h2>Inscription</h2>
-						<p>Veuillez remplir ce formulaire d'inscription :</p>
-						
-						<form method="post" action="../Contoleur/traitementConnexion.php">
+
+						<center>
+
+							<h2>Connexion</h2>
+							<p>Veuillez saisir le mot de passe :</p>
 							
-				            <div class="form-group"></br>
-				                  Email * :
-				                    <input type="email" class="form-control" id="mailInscription1" name="mailInscription1" placeholder="email" name="emailInscription1">
-				            </div>
-				            <div class="form-group"></br>
-				                  Mot de passe * :
-				                    <input type="password" class="form-control" id="mailInscription2" name="mailInscription2" placeholder="password">
-				            </div>
-							</br>
-							<button type="submit" class="button special" name="submit">Envoyer</button>
-						
-						</form>
+							<form method="post" action="../Traitement/traitementConnexion.php">
+								
+					            <div class="form-group"></br>
+					                  Mot de passe * :
+					                    <input type="password" class="form-control" id="pass" name="pass" placeholder="password">
+					            </div>
+					            
+								</br>
+								
+								<button type="submit" class="button special" name="submit">Envoyer</button>
+							
+							</form>
+
+						</center>
 						
 					</div>
 				</section>

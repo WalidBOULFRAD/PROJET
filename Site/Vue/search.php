@@ -14,7 +14,7 @@
 	
 								<h2>Recherche</h2>
 								
-								<form method="post" role="search" action="../Controleur/traitementRecherche.php">
+								<form method="post" role="search" action="../Traitement/traitementRecherche.php">
 							        
 							        <div class="form-group"></br>
 										Mot clé :
