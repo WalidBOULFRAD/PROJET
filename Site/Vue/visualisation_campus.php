@@ -2,7 +2,7 @@
 	include '../Includes/bootstrap.php';
 	include '../Includes/header.php';
 ?>
-
+	
 			<!-- Banner -->
 				<section id="banner">
 					<h2>NeOCampus</h2>
@@ -229,6 +229,8 @@
 					</div>
 					
 				</div>
+
+
 
 
 <?php
