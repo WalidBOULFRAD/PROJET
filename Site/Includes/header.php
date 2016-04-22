@@ -26,10 +26,26 @@
 	        width : 800px;
 	        margin: auto;
 	      }
+		  #table {
+			  height: 400px;
+			  width : 800px;
+			  margin: auto;
+			  display: none;
+			  background-color: #2b542c;
+			  overflow: scroll;
+		  }
+		  #graphe {
+			  height: 400px;
+			  width : 800px;
+			  margin: auto;
+			  display: none;
+			  background-color: #0f0f0f;
+		  }
     	</style>
 		
 	</head>
-	<body class="landing">
+	<body class="landing" onload="javascript: $.getScript('../Includes/VisualisationJsLibrary.js',
+	function (){ displayMap(); } );">
 		<div id="page-wrapper">
 
 			<!-- Header -->

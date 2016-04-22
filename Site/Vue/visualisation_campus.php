@@ -8,14 +8,13 @@
 <?php
 	include '../Includes/header.php';	
 ?>
-
-			<!-- Banner -->
+			<!-- Banner
 				<section id="banner">
 					<h2>NeOCampus</h2>
 				</section>
 
-			<!-- Message Contact -->
-				<div class="jumbotron col-md-12">
+			 Message Contact -->
+				<div class="jumbotron col-md-12" ">
 					
 							
 					
@@ -36,7 +35,7 @@
 							
 							</div>
 -->
-
+	<!-- modifif ici -->
 							<div role="tabpanel">
 				
 								<ul class="nav nav-tabs" role="tablist">
@@ -53,46 +52,27 @@
 				                          	</br>
 											
 											<div class='btn-group' role='type' aria-label='...'>
-												<button type='button' class='btn btn-default col-md-12'>Tableau</button></br>
-												<button type='button' class='btn btn-default col-md-12'>Graphe</button></br>
-												<button type='button' class='btn btn-default col-md-12'>Carte & Plan</button>
+												<button type='button' class='btn btn-default col-md-12'
+														onclick="javascript: $.getScript('../Includes/VisualisationJsLibrary.js',
+												 		function (){ displayElement('table'); } );">
+													Tableau
+												</button>
+												</br>
+												<button type='button' class='btn btn-default col-md-12'
+														onclick="javascript: $.getScript('../Includes/VisualisationJsLibrary.js',
+												 		function (){ displayElement('graphe'); } );">Graphe</button></br>
+												<button type='button' class='btn btn-default col-md-12'
+														onclick="javascript: $.getScript('../Includes/VisualisationJsLibrary.js',
+												 		function (){ displayElement('map'); } );">Carte & Plan</button>
 											</div>
 											
 										</div>
 										
-										<div class="col-md-8">
-										
-											</br>
-										
+										<div class="col-md-8" >
+											<div id="table"></div>
+											<div id="graphe"></div>
 											<div id= "map" ></div>
-												
-												<script type="text/javascript">
-													 // set up the map
-												    var map = new L.Map('map');
-												    var osmUrl ='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-												    var osmAttrib ='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-												    var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
-												    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227),17);
-												    map.addLayer(osm);
-													//set up marker and polygonne
-													 $.getJSON("../Includes/map.geojson", function(data){
-														 var icon = L.icon({
-															 iconUrl: 'images/info.png',
-															 iconSize: [20,20]
-														 });
-														 L.geoJson(data,{
-
-															 pointToLayer: function(feature,latlng){
-																 var marker = L.marker(latlng,{icon: icon});
-																 link = feature.properties.Location;
-																 marker.bindPopup("<a href="+link+">"+feature.properties.Location+"</a>");
-																 return marker;
-															 }
-														 }).addTo(map);
-													 });
-												</script>
-												
-											</div>
+										</div>
 											
 										</div>
 										
@@ -169,5 +149,5 @@
 
 
 <?php
-	include '../Includes/footer.php';
+//	include '../Includes/footer.php';
 ?>
