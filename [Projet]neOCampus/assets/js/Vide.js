@@ -1,0 +1,5 @@
+$(function Vide() {
+
+	// div vide
+
+});

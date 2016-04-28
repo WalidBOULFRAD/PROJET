@@ -4,17 +4,48 @@
 { "_id" : 2, "latitude" : 43.55867869999999, "longitude" : 1.4697025999999918 }
 
 // Batiments
-{ "_id" : 0, "idC" : 0, "nom" : "4TP4", "url" : "../img/Batiments/Bat0.jpg" }
-{ "_id" : 1, "idC" : 1, "nom" : "4TP2", "url" : "../img/Batiments/Bat1.jpg" }
-{ "_id" : 2, "idC" : 2, "nom" : "4R3", "url" : "../img/Batiments/Bat2.jpg" }
+{ "_id" : 0, "idC" : 0, "nom" : "4TP4", "url" : "../img/Batiment/Batiment0.jpg" }
+{ "_id" : 1, "idC" : 1, "nom" : "4TP2", "url" : "../img/Batiment/Batiment1.jpg" }
+{ "_id" : 2, "idC" : 2, "nom" : "4R3", "url" : "../img/Batiment/Batiment2.jpg" }
 
 // Pieces
-{ "_id" : 0, "idB" : 0, "url" : "../img/Pieces/Eta0.jpg" }
-{ "_id" : 1, "idB" : 0, "url" : "../img/Pieces/Eta1.jpg" }
-{ "_id" : 2, "idB" : 0, "url" : "../img/Pieces/Eta2.jpg" }
-{ "_id" : 3, "idB" : 1, "url" : "../img/Pieces/Eta0.jpg" }
-{ "_id" : 4, "idB" : 1, "url" : "../img/Pieces/Eta1.jpg" }
-{ "_id" : 5, "idB" : 1, "url" : "../img/Pieces/Eta2.jpg" }
-{ "_id" : 6, "idB" : 2, "url" : "../img/Pieces/Eta0.jpg" }
-{ "_id" : 7, "idB" : 2, "url" : "../img/Pieces/Eta1.jpg" }
-{ "_id" : 8, "idB" : 2, "url" : "../img/Pieces/Eta2.jpg" }
+{ "_id" : 0, "idB" : 0, "url" : "../img/Piece/Piece0.jpg" }
+{ "_id" : 1, "idB" : 0, "url" : "../img/Piece/Piece1.jpg" }
+{ "_id" : 2, "idB" : 0, "url" : "../img/Piece/Piece2.jpg" }
+{ "_id" : 3, "idB" : 0, "url" : "../img/Piece/Piece3.jpg" }
+{ "_id" : 4, "idB" : 0, "url" : "../img/Piece/Piece4.jpg" }
+{ "_id" : 5, "idB" : 0, "url" : "../img/Piece/Piece5.jpg" }
+{ "_id" : 6, "idB" : 0, "url" : "../img/Piece/Piece6.jpg" }
+{ "_id" : 7, "idB" : 0, "url" : "../img/Piece/Piece7.jpg" }
+{ "_id" : 8, "idB" : 0, "url" : "../img/Piece/Piece8.jpg" }
+{ "_id" : 9, "idB" : 1, "url" : "../img/Piece/Piece9.jpg" }
+{ "_id" : 10, "idB" : 1, "url" : "../img/Piece/Piece10.jpg" }
+{ "_id" : 11, "idB" : 1, "url" : "../img/Piece/Piece11.jpg" }
+{ "_id" : 12, "idB" : 1, "url" : "../img/Piece/Piece12.jpg" }
+{ "_id" : 13, "idB" : 1, "url" : "../img/Piece/Piece13.jpg" }
+{ "_id" : 14, "idB" : 1, "url" : "../img/Piece/Piece14.jpg" }
+{ "_id" : 15, "idB" : 2, "url" : "../img/Piece/Piece15.jpg" }
+{ "_id" : 16, "idB" : 2, "url" : "../img/Piece/Piece16.jpg" }
+{ "_id" : 17, "idB" : 2, "url" : "../img/Piece/Piece17.jpg" }
+{ "_id" : 18, "idB" : 2, "url" : "../img/Piece/Piece18.jpg" }
+{ "_id" : 19, "idB" : 2, "url" : "../img/Piece/Piece19.jpg" }
+{ "_id" : 20, "idB" : 2, "url" : "../img/Piece/Piece20.jpg" }
+{ "_id" : 21, "idB" : 2, "url" : "../img/Piece/Piece21.jpg" }
+{ "_id" : 22, "idB" : 2, "url" : "../img/Piece/Piece22.jpg" }
+
+// Types Capteur
+{ "_id" : 0, "nom" : "Temperature" }
+{ "_id" : 1, "nom" : "Luminosité" }
+{ "_id" : 2, "nom" : "Volets" }
+{ "_id" : 3, "nom" : "Camera" }
+{ "_id" : 4, "nom" : "Son" }
+{ "_id" : 5, "nom" : "CO2" }
+{ "_id" : 6, "nom" : "Humidité" }
+
+// Capteurs
+{ "_id" : 0, "idC" : 0, "idP" : 0, "valeurC" : 15 }
+{ "_id" : 1, "idC" : 0, "idP" : 1, "valeurC" : 15 }
+{ "_id" : 2, "idC" : 0, "idP" : 2, "valeurC" : 15 }
+{ "_id" : 3, "idC" : 0, "idP" : 3, "valeurC" : 15 }
+{ "_id" : 4, "idC" : 0, "idP" : 4, "valeurC" : 15 }
+{ "_id" : 5, "idC" : 0, "idP" : 5, "valeurC" : 15 }
