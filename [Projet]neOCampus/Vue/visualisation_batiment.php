@@ -42,7 +42,7 @@
 				                          	</br>
 											
 											<?php
-												include '../Includes/sousTypesPiece&Batiment.php';	
+												include '../Includes/sousTypes_Piece_Batiment.php';	
 											?>
 											
 										</div>
