@@ -16,7 +16,7 @@ $(function () {
         carte.fadeIn(1000);
     });
 
-    $('#graphe').click(function () {
+    $('#graphique').click(function () {
         tableau.fadeOut(10);
         carte.fadeOut(10);
         courbe.fadeIn(1000);

@@ -5,6 +5,8 @@
 
 <head xmlns="http://www.w3.org/1999/html">
     <script src="../assets/js/Transition_Piece_Batiment.js"></script>
+	<script src="../assets/js/Courbe.js"></script>
+	<script src="../assets/js/Tableau.js"></script>
 </head>
 
 			<!-- Banner -->
@@ -16,55 +18,51 @@
 				<div class="jumbotron col-md-12">
 					
 					<div class="box">
-						
-						<div>
 								
-							<center><h2>Pièces</h2></center>
+						<center><h2>Pièces</h2></center>
 
-							<div role="tabpanel">
-				
-								<ul class="nav nav-tabs" role="tablist">
-									<li role="presentation"><a href="./visualisation_campus.php">Campus</a></li>
-									<li role="presentation"><a href="./visualisation_batiment.php">Bâtiments</a></li>
-									<li role="presentation" class="active"><a>Pièces</a></li>
-								</ul>
+						<div role="tabpanel">
+			
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="./visualisation_campus.php">Campus</a></li>
+								<li role="presentation"><a href="./visualisation_batiment.php">Bâtiments</a></li>
+								<li role="presentation" class="active"><a>Pièces</a></li>
+							</ul>
+							
+							<div class="tab-content">
 								
-								<div class="tab-content">
-									
-									<div role="tabpanel" class="tab-pane active">
+								<div role="tabpanel" class="tab-pane active">
 
+									<?php
+										include '../Includes/2D_3D.php';
+									?>
+
+									<div class="col-md-2">
+                          	
+			                          	</br>
+										
 										<?php
-											include '../Includes/2D_3D.php';
+											include '../Includes/sousTypes_Piece_Batiment.php';
 										?>
-
-										<div class="col-md-2">
-	                          	
-				                          	</br>
-											
-											<?php
-												include '../Includes/sousTypes_Piece_Batiment.php';
-											?>
-											
-										</div>
 										
-										<div class="col-md-8">
-										
-											</br>
-											
-											<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id= "map" style="min-width: 310px; height: 400px; margin: 0 auto">
-<!--
-												<?php
-													include '../Includes/listePieces.php';
-												?>
--->
-                                            </div>
-
-										</div>
-											
 									</div>
 									
+									<div class="col-md-8">
+									
+										</br>
+										
+										<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                        <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                        <div id= "machin" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+											<?php
+												include '../Includes/listePieces.php';
+											?>
+																						
+                                        </div>
+
+									</div>
+								
 									<div class="col-md-2">
 									
 										<?php
@@ -85,13 +83,6 @@
                     </div>
 
                 </div>
-
-			<!-- vu qu'on utilise pas le footer -->
-			</div>
-			
-		</body>
-
-	</html>
 
 <?php
 	// include '../Includes/footer.php';

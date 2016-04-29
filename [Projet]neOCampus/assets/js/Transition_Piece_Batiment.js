@@ -1,6 +1,6 @@
 $(function () {
 
-    var carte = $('#map');
+    var carte = $('#machin');
     var courbe = $('#courbe');
     var tableau = $('#tbl');
 
@@ -10,13 +10,13 @@ $(function () {
         carte.fadeIn(3000);
     });
 
-    $('#carte').click(function () {
+    $('#elem').click(function () {
         tableau.fadeOut(10);
         courbe.fadeOut(10);
         carte.fadeIn(1000);
     });
 
-    $('#graphe').click(function () {
+    $('#graphique').click(function () {
         tableau.fadeOut(10);
         carte.fadeOut(10);
         courbe.fadeIn(1000);

@@ -29,11 +29,6 @@
 		<script src="../assets/js/webgl-utils.js"></script>
 		<script src="../assets/js/glMatrix-0.9.5.min.js"></script>
 		<script src="../assets/js/lecteur3D.js"></script>
-		
-	    <script src="../assets/js/Courbe.js"></script>
-	    <script src="../assets/js/Tableau.js"></script>
-	    <script src="../assets/js/Carte.js"></script>
-	    <script src="../assets/js/Vide.js"></script>
 
 		<style>
 			#mapForPolyline{
@@ -54,7 +49,6 @@
 				background-color: #2b542c;
 				overflow: scroll;
 			}
-/*
 			#graphe {
 				height: 400px;
 				width : 800px;
@@ -62,12 +56,17 @@
 				display: none;
 				background-color: #2b542c;
 			}
-*/
+			#element {
+				height: 400px;
+				width : 800px;
+				margin: auto;
+				display: none;
+				background-color: #ffffff;
+			}
     	</style>
     	
 	</head>
-	<body>
-<!-- 	<body class="landing" onload="javascript: $.getScript('../assets/js/VisualisationJsLibrary.js', function (){ displayMap(); } );"> -->
+	<body class="landing" onload="javascript: $.getScript('../assets/js/VisualisationJsLibrary.js', function (){ displayMap(); } );">
 		
 		<div id="page-wrapper">
 

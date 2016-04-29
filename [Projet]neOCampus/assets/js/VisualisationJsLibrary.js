@@ -1,4 +1,4 @@
-var idTab = new Array('map','table','graphe');
+var idTab = new Array('map','table','graphe','element');
 var element_currentlyDisplay;
 var oldElementDisplayed = 'map';
 var current_filter;
@@ -30,12 +30,13 @@ function setContentBlockDisplayed(nameDiv){
     switch (nameDiv){
         case 'map' :
             document.getElementById('table').style.display = 'none';
-            document.getElementById('graphe').style.display = 'none'
+            document.getElementById('graphe').style.display = 'none';
             displayMapWithoutLoadMaker();
             break;
         case 'table':
             if(!(oldElementDisplayed == nameDiv)){
-                $("#tableData").fadeOut().detach();// allow to not repeat the data
+	            // allow to not repeat the data
+                $("#tableData").fadeOut().detach();
                 $("#"+nameDiv).append("<table id=\"tableData\">" + "</table>");
                 for(var i=0; i< 10; i++){
                     $("#tableData").append( "<tr>" +
@@ -48,6 +49,12 @@ function setContentBlockDisplayed(nameDiv){
         case 'graphe':
             $("#graphe").style = "background-color: red;";
             break;
+        case 'element':
+        	document.getElementById('table').style.display = 'none';
+            document.getElementById('graphe').style.display = 'none';
+            document.getElementById('map').style.display = 'none';
+			document.getElementById('element').style.display = 'block';
+        	break;
     }
 }
 
@@ -64,6 +71,13 @@ function sendPostRequest(name, latitude, longitude){
         }
 }
 
+function sendPostRequest2(){
+    var data =  new FormData();
+    var request = new XMLHttpRequest();
+    request.open('POST', '../Includes/listeBatiments.php', true);
+    request.send(data);
+}
+
 /*
     this function allow to set element on the map 
     and load the PolygonForCordinate.php page if the user chose to add a polygon 
@@ -72,9 +86,9 @@ function sendPostRequest(name, latitude, longitude){
 
 function ConfigOnCordinateClickEvent(){
     map.on('click', function(e) {
-    var buildingsName = prompt("Donner un nom à cette coordonée : ","");
+    var buildingsName = prompt("Donnez un nom à cette coordonée : ","");
         if(buildingsName != null && buildingsName !="" &&  buildingsName.length > 1){
-            if(confirm("voulez vous associer un polygonne à cette coordonée?")){
+            if(confirm("Voulez vous associer un polygone à cette coordonée ? En annulant cela reviens à associer un cerle")){
                 window.location.href =  "../Vue/PolygonForCordinate.php?lat="+e.latlng.lat+"&lng="+e.latlng.lng+"&name="+buildingsName;
             } else {
                 sendPostRequest(buildingsName,e.latlng.lat,e.latlng.lng);
@@ -119,7 +133,7 @@ function displayMap(){
     var osmAttrib ='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 	//set the map content on Université Paul Sabatier 
-    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227),17);
+    map.setView(new L.LatLng(43.562015, 1.468874),17);
     map.addLayer(osm);
     loadMakerOnMapFrom("../assets/json/objectOnMap.json?cache="+(Math.random()*1000000));
 }
@@ -129,7 +143,7 @@ function displayMapAdmin(){
     var osmAttrib ='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 	//set the map content on Université Paul Sabatier 
-    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227),17);
+    map.setView(new L.LatLng(43.562015, 1.468874),17);
     map.addLayer(osm);
 	ConfigOnCordinateClickEvent();
     loadMakerOnMapFrom("../assets/json/objectOnMap.json?cache="+(Math.random()*1000000));
@@ -140,7 +154,7 @@ function displayMapWithoutLoadMaker(){
     var osmAttrib ='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 	//set the map content on Université Paul Sabatier 
-    map.setView(new L.LatLng(43.55947645236045, 1.4724624876495227), 17);
+    map.setView(new L.LatLng(43.562015, 1.468874),17);
     map.addLayer(osm);
 }
  

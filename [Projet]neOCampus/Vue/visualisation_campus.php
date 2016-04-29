@@ -2,9 +2,12 @@
 	include '../Includes/bootstrap.php';
 	include '../Includes/header.php';
 ?>
-
+	
 <head xmlns="http://www.w3.org/1999/html">
     <script src="../assets/js/Transition_Campus.js"></script>
+	<script src="../assets/js/Courbe.js"></script>
+	<script src="../assets/js/Tableau.js"></script>
+<!-- 	<script src="../assets/js/Carte.js"></script> -->
 </head>
 	
 			<!-- Banner -->
@@ -50,9 +53,9 @@
 										<div class="col-md-8">
 										
 											</br>
-											<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id= "map" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+											<div id="table"></div>
+                                            <div id="graphe"></div>
+                                            <div id= "map"></div>
 																								
 										</div>
 											
@@ -77,13 +80,10 @@
 					<p>.</p>
 					</br>
 
-				<!-- vu qu'on utilise pas le footer -->
 				</div>
 			
-			</body>
-
-		</html>
+			</div>
 
 <?php
-	// include '../Includes/footer.php';
+	include '../Includes/footer.php';
 ?>

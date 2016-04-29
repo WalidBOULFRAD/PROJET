@@ -29,10 +29,6 @@
 		<script src="../assets/js/webgl-utils.js"></script>
 		<script src="../assets/js/glMatrix-0.9.5.min.js"></script>
 		<script src="../assets/js/lecteur3D.js"></script>
-		
-	    <script src="../assets/js/Courbe.js"></script>
-	    <script src="../assets/js/Tableau.js"></script>
-	    <script src="../assets/js/Carte.js"></script>
 
 		<style>
 			#mapForPolyline{
@@ -41,16 +37,6 @@
 				margin: auto;
 			}
 			#map {
-				height: 400px;
-				width : 800px;
-				margin: auto;
-			}
-			#batiment {
-				height: 400px;
-				width : 800px;
-				margin: auto;
-			}
-			#piece {
 				height: 400px;
 				width : 800px;
 				margin: auto;
@@ -69,6 +55,13 @@
 				margin: auto;
 				display: none;
 				background-color: #2b542c;
+			}
+			#element {
+				height: 400px;
+				width : 800px;
+				margin: auto;
+				display: none;
+				background-color: #ffffff;
 			}
     	</style>
     	
