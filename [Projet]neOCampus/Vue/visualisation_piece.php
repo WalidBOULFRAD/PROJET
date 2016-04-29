@@ -53,26 +53,26 @@
 											
 											<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                             <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id= "elem" style="min-width: 310px; height: 400px; margin: 0 auto">
-	                                            <!--
-<?php
+                                            <div id= "map" style="min-width: 310px; height: 400px; margin: 0 auto">
+<!--
+												<?php
 													include '../Includes/listePieces.php';
 												?>
 -->
-												HELLO
                                             </div>
 
 										</div>
 											
-										</div>
-										
-										<div class="col-md-2">
-										
-											<?php
-												include '../Includes/filtres.php';
-											?>
+									</div>
+									
+									<div class="col-md-2">
+									
+										<?php
+											include '../Includes/filtres.php';
+										?>
 
-                                        </div>
+                                    </div>
+                                    
                                 </div>
 
                             </div>
@@ -86,40 +86,12 @@
 
                 </div>
 
-    </div>
+			<!-- vu qu'on utilise pas le footer -->
+			</div>
+			
+		</body>
 
-	<script>
-		$(function () {
-			$('#container').highcharts({
-				chart: {
-					type: 'line'
-				},
-				title: {
-					text: 'Température'
-				},
-				xAxis: {
-					categories: ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
-				},
-				yAxis: {
-					title: {
-						text: 'Temperature (°C)'
-					}
-				},
-				plotOptions: {
-					line: {
-						dataLabels: {
-							enabled: true
-						},
-						enableMouseTracking: false
-					}
-				},
-				series: [{
-					name: 'Salle 214',
-					data: [17.0, 15.9, 16.5, 14.5, 17, 13]
-				}]
-			});
-		});
-	</script>
+	</html>
 
 <?php
 	// include '../Includes/footer.php';

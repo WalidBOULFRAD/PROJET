@@ -53,10 +53,12 @@
 											
 											<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                             <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                                            <div id= "vide" style="min-width: 310px; height: 400px; margin: 0 auto">
-	                                            <?php
+                                            <div id= "map" style="min-width: 310px; height: 400px; margin: 0 auto">
+<!--
+												<?php
 													include '../Includes/listeBatiments.php';
 												?>
+-->
                                             </div>
 											
 										</div>
@@ -83,7 +85,14 @@
 					</div>
 					
 				</div>
+				
+			<!-- vu qu'on utilise pas le footer -->
+			</div>
+			
+		</body>
+
+	</html>
 
 <?php
-	include '../Includes/footer.php';
+	// include '../Includes/footer.php';
 ?>

@@ -4,7 +4,7 @@
 ?>
 
 <head xmlns="http://www.w3.org/1999/html">
-    <script src="../Traitement/_assets/js/Transition_campus.js"></script>
+    <script src="../assets/js/Transition_Campus.js"></script>
 </head>
 	
 			<!-- Banner -->
@@ -30,6 +30,7 @@
 								</ul>
 								
 								<div class="tab-content">
+									
 									<div role="tabpanel" class="tab-pane active">
 
 										<?php
@@ -41,7 +42,7 @@
 				                          	</br>
 											
 											<?php
-												include '../Includes/sousTypes.php';
+												include '../Includes/sousTypes_Campus.php';
 											?>
 											
 										</div>
@@ -49,9 +50,9 @@
 										<div class="col-md-8">
 										
 											</br>
-											<div id= "table"></div>
-											<div id= "graphe"></div>
-											<div id= "map" ></div>
+											<div id="courbe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                            <div id="tbl" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                            <div id= "map" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 																								
 										</div>
 											
@@ -76,10 +77,13 @@
 					<p>.</p>
 					</br>
 
+				<!-- vu qu'on utilise pas le footer -->
 				</div>
-				
-			</div>
+			
+			</body>
+
+		</html>
 
 <?php
-	include '../Includes/footer.php';
+	// include '../Includes/footer.php';
 ?>

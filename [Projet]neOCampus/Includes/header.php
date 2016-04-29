@@ -54,8 +54,8 @@
 				background-color: #2b542c;
 				overflow: scroll;
 			}
-			/*
-#graphe {
+/*
+			#graphe {
 				height: 400px;
 				width : 800px;
 				margin: auto;
@@ -66,7 +66,8 @@
     	</style>
     	
 	</head>
-	<body class="landing" onload="javascript: $.getScript('../assets/js/VisualisationJsLibrary.js', function (){ displayMap(); } );">
+	<body>
+<!-- 	<body class="landing" onload="javascript: $.getScript('../assets/js/VisualisationJsLibrary.js', function (){ displayMap(); } );"> -->
 		
 		<div id="page-wrapper">
 
