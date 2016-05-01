@@ -12,7 +12,7 @@
 													</div>
 													</br>
 													<div>
-														<input type="checkbox" id="Luminosité" name="Luminosité" checked>
+														<input type="checkbox" id="Luminosite" name="Luminosite" checked>
 														<label for="Luminosité">Luminosité</label>
 													</div>
 													</br>
@@ -37,7 +37,7 @@
 													</div>
 													</br>
 													<div>
-														<input type="checkbox" id="Humidité" name="Humidité" checked>
+														<input type="checkbox" id="Humidite" name="Humidite" checked>
 														<label for="Humidité">Humidité</label>
 													</div>
 																											

@@ -1,12 +1,8 @@
-var idTab = new Array('map','table','graphe');
+var idTab = new Array('map','table','graphe','element');
 var element_currentlyDisplay;
 var oldElementDisplayed = 'map';
 var current_filter;
 var map = new L.Map('map');
-var dataViewActivate = 'table';
-var checkBoxTab = ['Temperature','Luminosite','Volets','Camera','Son','CO2','Humidite'];
-var nameBuildingForTransition;
-
 
 // this fonction allow to switch betwen each view on the curent page 
 // in order to display content of diferent div
@@ -39,19 +35,26 @@ function setContentBlockDisplayed(nameDiv){
             break;
         case 'table':
             if(!(oldElementDisplayed == nameDiv)){
-                $("#tableData").fadeOut().detach();// allow to not repeat the data
+	            // allow to not repeat the data
+                $("#tableData").fadeOut().detach();
                 $("#"+nameDiv).append("<table id=\"tableData\">" + "</table>");
-                for(var i=0; i< checkBoxTab.length; i++){
-                    if( document.getElementById(checkBoxTab[i]).checked){
-                        $("#tableData").append( "<tr>" +" <td>" + checkBoxTab[i] + "</td>"+" <td>" + nameBuildingForTransition + "</td>" + "</tr>");
-                    }
-                    
+                for(var i=0; i< 10; i++){
+                    $("#tableData").append( "<tr>" +
+                        " <td>test" + i + "</td>" +
+                        " <td>test" + i + "</td>" +
+                        "</tr>");
                 }
             }
             break;
         case 'graphe':
             $("#graphe").style = "background-color: red;";
             break;
+        case 'element':
+        	document.getElementById('table').style.display = 'none';
+            document.getElementById('graphe').style.display = 'none';
+            document.getElementById('map').style.display = 'none';
+			document.getElementById('element').style.display = 'block';
+        	break;
     }
 }
 
@@ -68,6 +71,13 @@ function sendPostRequest(name, latitude, longitude){
         }
 }
 
+function sendPostRequest2(){
+    var data =  new FormData();
+    var request = new XMLHttpRequest();
+    request.open('POST', '../Includes/listeBatiments.php', true);
+    request.send(data);
+}
+
 /*
     this function allow to set element on the map 
     and load the PolygonForCordinate.php page if the user chose to add a polygon 
@@ -76,9 +86,9 @@ function sendPostRequest(name, latitude, longitude){
 
 function ConfigOnCordinateClickEvent(){
     map.on('click', function(e) {
-    var buildingsName = prompt("Donner un nom à cette coordonée : ","");
+    var buildingsName = prompt("Donnez un nom à cette coordonée : ","");
         if(buildingsName != null && buildingsName !="" &&  buildingsName.length > 1){
-            if(confirm("voulez vous associer un polygonne à cette coordonée?")){
+            if(confirm("Voulez vous associer un polygone à cette coordonée ? En annulant cela reviens à associer un cerle")){
                 window.location.href =  "../Vue/PolygonForCordinate.php?lat="+e.latlng.lat+"&lng="+e.latlng.lng+"&name="+buildingsName;
             } else {
                 sendPostRequest(buildingsName,e.latlng.lat,e.latlng.lng);
@@ -91,8 +101,6 @@ function ConfigOnCordinateClickEvent(){
     });    
 }
 
-
-
 // allow to draw objet on the map 
 function loadMakerOnMapFrom(file){
     var request = new XMLHttpRequest();
@@ -103,19 +111,15 @@ function loadMakerOnMapFrom(file){
           if (request.readyState == 4 && request.status == "200") {
             var actual_JSON = JSON.parse(request.responseText);
             for(var i=0; i < actual_JSON.length;i++) {
-                
                 switch(actual_JSON[i].Type){
                     case 'Cercle':
                         var circle =  L.circle(actual_JSON[i].Points,12).addTo(map);
-                         circle.bindPopup( "<a >see the filters data</a>");
+                        circle.bindPopup( "Batiment : " + actual_JSON[i].Name);
                         break;
                     case 'Polylines':
                         var tab= actual_JSON[i].Points;
-                        var name = actual_JSON[i].Name;
                         var polygon = L.polygon(tab.Points).addTo(map);
-                        polygon.bindPopup($('<a id="speciallink">'+name+'</a>').click(function() {
-                                                seeDetailsOf(document.getElementById("speciallink").textContent);
-                                            })[0]);
+                        polygon.bindPopup( "Batiment : " + actual_JSON[i].Name);
                         break;
                 }
             }
@@ -123,21 +127,6 @@ function loadMakerOnMapFrom(file){
     };
     request.send(null); 
 }
-
-function seeDetailsOf(buildingName){
-    nameBuildingForTransition = buildingName;
-    switch(dataViewActivate){
-        case 'table':
-            displayElement('table');
-            break;
-        case 'graphe':
-            displayElement('graphe');
-            break; 
-    }
-
-}
-
-
 
 function displayMap(){
     var osmUrl ='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -165,7 +154,7 @@ function displayMapWithoutLoadMaker(){
     var osmAttrib ='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 17, maxZoom: 17, attribution: osmAttrib});
 	//set the map content on Université Paul Sabatier 
-    map.setView(new L.LatLng(43.562015, 1.468874), 17);
+    map.setView(new L.LatLng(43.562015, 1.468874),17);
     map.addLayer(osm);
 }
  
